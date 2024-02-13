@@ -19,3 +19,6 @@ mojave_homelessness = homelessness[is_in_canu]
 # Filter for rows where family_members is less than 1000 
 # and region is Pacific
 fam_lt_1k_pac = homelessness[(homelessness["family_members"] < 1000)&(homelessness["region"] == "Pacific")]
+
+# Sort high_homelessness by descending indiv_per_10k
+high_homelessness_srt = high_homelessness.sort_values(["indiv_per_10k"], ascending = [False])
